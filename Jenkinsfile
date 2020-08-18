@@ -22,8 +22,6 @@ pipeline {
 				sh 'sudo yum install python-virtualenv'
 				sh 'virtualenv myvirtualenv'
 				sh 'source myvirtualenv/bin/activate'
-				echo 'Running the pylint package'
-				sh 'pylint employee.py'
 				echo 'Running the unit test case file'
 				sh 'python test_employee.py'
 				
