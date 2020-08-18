@@ -31,7 +31,7 @@ pipeline {
 			steps {
 				sh "sudo scp -i  '$WORKSPACE/Q20908-new.pem' -o StrictHostKeyChecking=no -r employee.py ec2-user@54.162.194.92:/home/ec2-user"
 				sh "sudo scp -i  '$WORKSPACE/Q20908-new.pem' -o StrictHostKeyChecking=no -r test_employee.py ec2-user@54.162.194.92:/home/ec2-user"
-				sh 'sudo ssh -T -i "Q20908-new.pem" -o StrictHostKeyChecking=no ec2-user@ec2-54-162-194-92.compute-1.amazonaws.com<<EOT'
+				sh '''sudo ssh -T -i "Q20908-new.pem" -o StrictHostKeyChecking=no ec2-user@ec2-54-162-194-92.compute-1.amazonaws.com echo "Hello world"<<EOT'''
 				echo 'Hello'
 			}
 		}
