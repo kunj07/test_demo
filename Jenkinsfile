@@ -27,5 +27,10 @@ pipeline {
 				sh 'python test_employee.py'
 			}
 		}
+		stage ('Deploy Stage') {
+			steps {
+				sh "sudo scp -i  '$WORKSPACE/Q20908-new.pem' -o StrictHostKeyChecking=no -r xyz.txt ec2-user@54.162.194.92:/tmp"
+			}
+		}
 	}
 }
