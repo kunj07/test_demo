@@ -3,12 +3,8 @@ pipeline {
 	stages {
 		stage ('CleanUp Stage') {
 			steps {
-				echo 'Cleaning all the files and folders on the ec2 instance'
-				sh 'sudo su'
-				sh 'yum uninstall pylint'
-				sh 'yum uninstall unittest2'
-				sh 'yum uninstall python3'
-				sh 'source myvirtualenv/bin/deactivate'
+				echo 'CleanUp of existing code and folder in jenkins'
+				cleanWs()
 			}
 		}
 		stage('CheckOut Stage') {
