@@ -34,7 +34,8 @@ pipeline {
 				sh '''sudo ssh -T -i "Q20908-new.pem" -o StrictHostKeyChecking=no ec2-user@ec2-54-162-194-92.compute-1.amazonaws.com 
 				echo "Hello world" 
 				sudo yum install python3
-				python3 -m virtualenv env
+				sudo yum install python-virtualenv
+				virtualenv env
 				source env/bin/activate
 				pip3 install unittest2
 				python3 test_employee.py
