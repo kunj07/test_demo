@@ -11,9 +11,9 @@ pipeline {
 			steps {
 				echo 'first step is to install python'
 				sh 'sudo su'
-				sh 'yum install python3'
+				sh 'sudo yum install python3'
 				echo 'Creating a virtual environment'
-				sh 'yum install python-virtualenv'
+				sh 'sudo yum install python-virtualenv'
 				sh 'virtualenv myvirtualenv'
 				sh 'source myvirtualenv/bin/activate'
 				echo 'Running the unit test case file'
