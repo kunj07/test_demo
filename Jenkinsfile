@@ -1,15 +1,15 @@
 pipeline {
 	agent any
 	stages {
-		stage('build') {
+		stage('CheckOut Stage') {
 			steps {
-				echo 'Hello, this is the build stage'
-				echo 'Hi, first stage completed'
+				echo 'Updates files in the working tree to match the version in the index or the specified tree.'
+				sh 'git checkout -b master'
 			}
 		}
-		stage ('test') {
+		stage ('Build Stage') {
 			steps {
-				echo 'Hi, this is the test stage'
+				echo 'Hi, this is the build stage'
 			}
 		}
 	}
