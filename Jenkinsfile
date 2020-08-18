@@ -4,7 +4,7 @@ pipeline {
 		stage('CheckOut Stage') {
 			steps {
 				echo 'Updates files in the working tree to match the version in the index or the specified tree.'
-				sh 'git checkout -b master'
+				checkout scm
 			}
 		}
 		stage ('Build Stage') {
