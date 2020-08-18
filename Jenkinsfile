@@ -37,7 +37,7 @@ pipeline {
 				sudo yum install python-virtualenv
 				virtualenv env
 				source env/bin/activate
-				pip3 install unittest2
+				sudo pip3 install unittest2
 				python3 test_employee.py
 				<<EOT'''
 				echo 'Hello'
