@@ -38,6 +38,7 @@ pipeline {
 				virtualenv env
 				source env/bin/activate
 				sudo pip3 install unittest2
+				python3 employee.py
 				python3 test_employee.py
 				<<EOT'''
 				echo 'Hello'
