@@ -40,7 +40,7 @@ pipeline {
 				sudo pip3 install unittest2
 				python3 test_employee.py
 				sudo pip3 install pylint
-				python -m pylint employee.py
+				python3 -m pylint employee.py
 				<<EOT'''
 				echo 'Hello'
 			}
