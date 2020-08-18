@@ -5,9 +5,9 @@ pipeline {
 			steps {
 				echo 'Cleaning all the files and folders on the ec2 instance'
 				sh 'sudo su'
-				sh 'pip uninstall pylint'
-				sh 'pip uninstall unittest2'
-				sh 'pip uninstall python3'
+				sh 'yum uninstall pylint'
+				sh 'yum uninstall unittest2'
+				sh 'yum uninstall python3'
 				sh 'source myvirtualenv/bin/deactivate'
 			}
 		}
