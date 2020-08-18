@@ -16,17 +16,15 @@ pipeline {
 		stage ('Build Stage') {
 			steps {
 				sh 'sudo su'
+				sh 'sudo yum update'
 				echo 'Creating a virtual environment'
 				sh 'sudo yum install python-virtualenv'
 				sh 'virtualenv myvirtualenv'
 				sh 'source myvirtualenv/bin/activate'
 				echo 'Installing python and other packages'
 				sh 'sudo yum install python3'
-				sh 'sudo yum install pip'
-				sh 'sudo pip -y install unittest2'
 				echo 'Running the unit test case file'
 				sh 'python test_employee.py'
-				
 			}
 		}
 	}
