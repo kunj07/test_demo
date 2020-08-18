@@ -22,7 +22,7 @@ pipeline {
 				sh 'source myvirtualenv/bin/activate'
 				echo 'Installing python and other packages'
 				sh 'sudo yum install python3'
-				sh 'sudo yum -y install unittest2'
+				sh 'sudo pip -y install unittest2'
 				echo 'Running the unit test case file'
 				sh 'python test_employee.py'
 				
