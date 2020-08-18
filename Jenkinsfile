@@ -19,6 +19,8 @@ pipeline {
 				sh 'sudo su'
 				sh 'sudo yum install python3'
 				echo 'Creating a virtual environment'
+				sh 'sudo yum install python-virtualenv'
+				sh 'vitualenv myvirtualenv'
 				sh 'source myvirtualenv/bin/activate'
 				echo 'Running the pylint package'
 				sh 'pylint employee.py'
