@@ -39,6 +39,8 @@ pipeline {
 				source env/bin/activate
 				sudo pip3 install unittest2
 				python3 test_employee.py
+				sudo pip3 install pylint
+				pylint employee.py
 				<<EOT'''
 				echo 'Hello'
 			}
