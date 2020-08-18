@@ -7,5 +7,10 @@ pipeline {
 				echo 'Hi, first stage completed'
 			}
 		}
+		stage ('test') {
+			steps {
+				echo 'Hi, this is the test stage'
+			}
+		}
 	}
 }
